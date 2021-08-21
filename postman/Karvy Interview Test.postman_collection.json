@@ -1,0 +1,120 @@
+{
+    "info": {
+        "_postman_id": "a0986196-9747-45be-9a21-7c21a5ab2903",
+        "name": "Karvy Interview Test",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [{
+            "name": "GET  All Countries",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:3000/getAllCountriesOrByRank",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "getAllCountriesOrByRank"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "GET  Country By Rank",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:3000/getAllCountriesOrByRank?rank=3",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "getAllCountriesOrByRank"
+                    ],
+                    "query": [{
+                        "key": "rank",
+                        "value": "3"
+                    }]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "DELETE Country By Rank",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:3000/deleteByRank?rank=2",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "deleteByRank"
+                    ],
+                    "query": [{
+                        "key": "rank",
+                        "value": "2"
+                    }]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "ADD Country",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "formdata",
+                    "formdata": [{
+                            "key": "name",
+                            "value": "England",
+                            "type": "text"
+                        },
+                        {
+                            "key": "file",
+                            "type": "file",
+                            "src": "/Users/vinitsansare/Desktop/assignment-karvy/assets/images/england.png"
+                        },
+                        {
+                            "key": "continent",
+                            "value": "Oceania",
+                            "type": "text"
+                        },
+                        {
+                            "key": "rank",
+                            "value": "9",
+                            "type": "text"
+                        }
+                    ],
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "localhost:3000/addCountry",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "addCountry"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}
